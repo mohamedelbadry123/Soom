@@ -343,3 +343,11 @@ healthchecksdb
 *.pdb
 *.dll
 *.pdb
+.vs/Soom/v16/.suo
+Soom/bin/Debug/netcoreapp3.1/Soom.pdb
+Soom/bin/Debug/netcoreapp3.1/Soom.Views.dll
+Soom/bin/Debug/netcoreapp3.1/Soom.Views.pdb
+Soom/obj/Debug/netcoreapp3.1/Soom.dll
+Soom/obj/Debug/netcoreapp3.1/Soom.pdb
+Soom/obj/Debug/netcoreapp3.1/Soom.Views.dll
+Soom/obj/Debug/netcoreapp3.1/Soom.Views.pdb
