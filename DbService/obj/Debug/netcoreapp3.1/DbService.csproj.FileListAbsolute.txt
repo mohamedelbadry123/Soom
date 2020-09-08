@@ -1,0 +1,14 @@
+D:\Works\35- Echo\Soom\DbService\bin\Debug\netcoreapp3.1\DbService.deps.json
+D:\Works\35- Echo\Soom\DbService\bin\Debug\netcoreapp3.1\DbService.dll
+D:\Works\35- Echo\Soom\DbService\obj\Debug\netcoreapp3.1\DbService.csprojAssemblyReference.cache
+D:\Works\35- Echo\Soom\DbService\obj\Debug\netcoreapp3.1\DbService.AssemblyInfoInputs.cache
+D:\Works\35- Echo\Soom\DbService\obj\Debug\netcoreapp3.1\DbService.AssemblyInfo.cs
+D:\Works\35- Echo\Soom\DbService\bin\Debug\netcoreapp3.1\DbService.pdb
+D:\Works\35- Echo\Soom\DbService\bin\Debug\netcoreapp3.1\Entities.dll
+D:\Works\35- Echo\Soom\DbService\bin\Debug\netcoreapp3.1\Entities.pdb
+D:\Works\35- Echo\Soom\DbService\obj\Debug\netcoreapp3.1\DbService.csproj.CoreCompileInputs.cache
+D:\Works\35- Echo\Soom\DbService\obj\Debug\netcoreapp3.1\DbService.csproj.CopyComplete
+D:\Works\35- Echo\Soom\DbService\obj\Debug\netcoreapp3.1\DbService.dll
+D:\Works\35- Echo\Soom\DbService\obj\Debug\netcoreapp3.1\DbService.pdb
+D:\Works\35- Echo\Soom\DbService\bin\Debug\netcoreapp3.1\Interfaces.dll
+D:\Works\35- Echo\Soom\DbService\bin\Debug\netcoreapp3.1\Interfaces.pdb

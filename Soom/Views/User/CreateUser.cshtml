@@ -1,0 +1,96 @@
+﻿@model Interfaces.ViewModel.UserVM.RegisterViewModel
+
+<div class="row">
+    <div class="col-12">
+        <h3 class="alert-success p-3 text-center">إنشاء مستخدم جديد </h3>
+    </div>
+</div>
+
+@using (Html.BeginForm("Register", "User", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>البريد الألكترونى</label>
+                @Html.TextBoxFor(c => c.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(c => c.Email, "", new { @class = "alert-danger" })
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>الأسم</label>
+                @Html.TextBoxFor(c => c.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(c => c.Name, "", new { @class = "alert-danger" })
+            </div>
+        </div>
+        
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>الصلاحية</label>
+                <select class="form-control" data-val="true" id="Spare_ElevatorId" name="Role">
+                    <option value="">اختر صلاحية المستخدم</option>
+                    <option value="admin">مسئول عام</option>
+                    <option value="user">مستخدم</option>
+                    <option value="sales">مبيعات</option>
+                    <option value="technical">فنى</option>
+                </select>
+                @Html.ValidationMessageFor(c => c.Role, "", new { @class = "alert-danger" })
+            </div>
+        </div>
+        
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>الرقم السرى</label>
+                @Html.TextBoxFor(c => c.Password, new { @class = "form-control", type = "password" })
+                @Html.ValidationMessageFor(c => c.Password, "", new { @class = "alert-danger" })
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>تأكيد الرقم السرى</label>
+                @Html.TextBoxFor(c => c.ConfirmPassword, new { @class = "form-control", type = "password" })
+                @Html.ValidationMessageFor(c => c.ConfirmPassword, "", new { @class = "alert-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="alert-danger">@Html.DisplayFor(c => c.Error)</label>
+        </div>
+    </div>
+    <div class="row">
+        <button type="submit" class="btn btn-success mr-3">حفظ</button>
+    </div>
+}
+
+@section scripts{
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            $(".js-dropdown").select2();
+            $(".select2-container").attr('style', 'width:100% !important');
+
+            $('.js-government').change(function () {
+                var govId = $(this).children('option:selected').val();
+
+                $.ajax({
+                    url: "/regionApi/byGovId/" + govId,
+                    method: "GET",
+                    success: function (obj) {
+                        $('.js-region').empty();
+                        $('.js-region').append('<option>اختر المنطقة ...</option>');
+                        for (var i = 0; i < obj.length; i++) {
+                            $('.js-region').append('<option value=' + obj[i].id + '>' + obj[i].name + '</option>');
+                        }
+                    },
+                    error: function () {
+                        console.log('----------------');
+                    }
+                });
+            });
+        });
+    </script>
+}

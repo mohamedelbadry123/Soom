@@ -1,0 +1,64 @@
+﻿@model Interfaces.ViewModel.UserVM.LoginViewModel
+
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>SB Admin - Start Bootstrap Template</title>
+    <!-- Bootstrap core CSS-->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template-->
+    <link href="/css/sb-admin.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Changa:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+        <div class="card card-login mx-auto mt-5">
+            <div class="card-header text-center" style="font-family: 'Amiri', serif; font-family: 'Changa', sans-serif; font-size:20px">تسجيل الدخول</div>
+            <div class="row">
+                <div class="col-12">
+                    <img  src="~/uploads/aknanLogo.PNG" class="w-100"/>
+                </div>
+            </div>
+            <div class="card-body">
+                @using (Html.BeginForm("Login", "User", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" style="float:right;font-family: 'Amiri', serif; font-family: 'Changa', sans-serif">اسم المستخدم</label>
+                        @Html.TextBoxFor(c => c.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(c => c.Email, "", new { @class = "alert-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" style="float:right; font-family: 'Amiri', serif; font-family: 'Changa', sans-serif">الرقم السرى</label>
+                        @Html.TextBoxFor(c => c.Password, new { @class = "form-control", type = "password" })
+                        @Html.ValidationMessageFor(c => c.Password, "", new { @class = "alert-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label class="alert-danger" style="float:right;font-family: 'Amiri', serif; font-family: 'Changa', sans-serif">@Model.Error</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">دخول</button>
+                }
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="/js/jquery.easing.min.js"></script>
+</body>
+
+</html>

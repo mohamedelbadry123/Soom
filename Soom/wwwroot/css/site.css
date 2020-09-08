@@ -1,0 +1,150 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+@font-face {
+    font-family: arabicFontNumber1;
+    src: url(../fonts/18_Khebrat_Musamim_Regular.ttf);
+}
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+.dataTables_wrapper,table{
+    width:100%
+}
+.row{
+    direction:rtl !important
+}
+
+label, .field-validation-error {
+    float: right !important
+}
+
+td{
+    text-align:right !important
+}
+
+.dataTables_empty{
+    text-align:center !important
+}
+
+.bootbox-body{
+    text-align:center !important;
+}
+
+.datepicker-dropdown {
+    max-width: 300px;
+}
+
+.datepicker {
+    float: right
+}
+
+    .datepicker.dropdown-menu {
+        right: auto
+    }
+
+.nav-link-text {
+    font-size: 22px !important;
+    font-family: 'Amiri', serif;
+    font-family: 'Changa', sans-serif;
+    color:#fff
+}
+.alert-success {
+    font-family: 'Amiri', serif !important;
+    font-family: 'Changa', sans-serif !important;
+    border-radius: 10px !important
+}
+.sidenav-second-level {
+    font-family: 'Amiri', serif;
+    font-family: 'Changa', sans-serif;
+    color: #fff
+}
+
+.card-header {
+    font-family: 'Amiri', serif;
+    font-family: 'Changa', sans-serif;
+    border-radius:10px  !important
+}
+
+.navbar-sidenav {
+    width: 250px !important
+}
+
+
+#mainNav.navbar-dark .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
+    margin-top: 8px !important
+}
+
+.btn-sm {
+    font-size: 8px !important
+}
+
+.badge {
+    font-size:15px !important
+}
+

@@ -1,0 +1,493 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Aknan - Dashboard</title>
+    <!-- Bootstrap core CSS-->
+
+    <link href="/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
+    @*<link href="/css/bootstrap.min.css" rel="stylesheet">*@
+
+
+    <!-- Custom fonts for this template-->
+    <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template-->
+    <link href="/css/sb-admin.css" rel="stylesheet">
+
+    <link href="/css/datatable-v4/bootstrap.css" rel="stylesheet">
+    <link href="/css/datatable-v4/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="/css/responsive.bootstrap4.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-rtl.css" rel="stylesheet">
+    <link href="~/css/select2.min.css" rel="stylesheet" />
+    <link href="/css/site.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Changa:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/buttons/1.3.1/css/buttons.bootstrap4.min.css" />
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+
+
+            <!-- Side Nav -->
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapsePosts"
+                               data-parent="#exampleAccordion">
+                                <i class="fa fa-fw fa-bullhorn ml-3 mr-2"></i>
+                                <span class="nav-link-text">الأعلانات</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapsePosts">
+                                <li>
+                                    <a href="/AdsText/Index">جميع الأعلانات الكتابية</a>
+                                </li>
+                                <li>
+                                    <a href="/AdsText/Create">إنشاء اعلان كتابى</a>
+                                </li>
+                                <li>
+                                    <a href="/AdsImage/Index">جميع صور الأعلانات</a>
+                                </li>
+                                <li>
+                                    <a href="/AdsImage/Create">إنشاء صورة اعلان</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseElvators"
+                               data-parent="#exampleAccordion">
+                                <i class="fa fa-fw fa-building ml-3 mr-2"></i>
+                                <span class="nav-link-text">المصاعد</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseElvators">
+                                <li>
+                                    <a href="/Elevator/Index">جميع المصاعد</a>
+                                </li>
+                                <li>
+                                    <a href="/Elevator/Create">إنشاء مصعد</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseSpares"
+                               data-parent="#collapseSpares">
+                                <i class="fa fa-fw fa-briefcase ml-3 mr-2"></i>
+                                <span class="nav-link-text">قطع الغيار</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseSpares">
+                                <li>
+                                    <a href="/Spare/Index">جميع قطع الغيار</a>
+                                </li>
+                                <li>
+                                    <a href="/Spare/Create">إنشاء قطعه غيار</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMalfunction"
+                               data-parent="#collapseMalfunction">
+                                <i class="fa fa-fw fa-wrench ml-3 mr-2"></i>
+                                <span class="nav-link-text">الأعطال</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseMalfunction">
+                                <li>
+                                    <a href="/Malfunctions/Index">جميع الأعطال</a>
+                                </li>
+                                <li>
+                                    <a href="/Malfunctions/Create">إنشاء عطل جديد</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseGovernment"
+                               data-parent="#collapseGovernment">
+                                <i class="fa fa-fw fa-wrench ml-3 mr-2"></i>
+                                <span class="nav-link-text">المحافظات</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseGovernment">
+                                <li>
+                                    <a href="/Government/Index">جميع المحافظات</a>
+                                </li>
+                                <li>
+                                    <a href="/Government/Create">إنشاء محافظة جديدة</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseRegion"
+                               data-parent="#collapseRegion">
+                                <i class="fa fa-fw fa-wrench ml-3 mr-2"></i>
+                                <span class="nav-link-text">المناطق</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseRegion">
+                                <li>
+                                    <a href="/Region/Index">جميع المناطق</a>
+                                </li>
+                                <li>
+                                    <a href="/Region/Create">إنشاء منطقة جديدة</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseContract"
+                               data-parent="#collapseContract">
+                                <i class="fa fa-fw fa-file-text ml-3 mr-2"></i>
+                                <span class="nav-link-text">العقود</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseContract">
+                                <li>
+                                    <a href="/Contract/Index">جميع العقود</a>
+                                </li>
+                                <li>
+                                    <a href="/Contract/Create">إنشاء عقد جديد</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseBranch"
+                               data-parent="#collapseBranch">
+                                <i class="fa fa-fw fa-home ml-3 mr-2"></i>
+                                <span class="nav-link-text">الفروع</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseBranch">
+                                <li>
+                                    <a href="/Branch/Index">جميع الفروع</a>
+                                </li>
+                                <li>
+                                    <a href="/Branch/Create">إنشاء فرع جديد</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseTechTask"
+                               data-parent="#collapseTechTask">
+                                <i class="fa fa-fw fa-tasks ml-3 mr-2"></i>
+                                <span class="nav-link-text">المهام</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseTechTask">
+                                <li>
+                                    <a href="/TechTask/Index">جميع المهام اليومية</a>
+                                </li>
+                                <li>
+                                    <a href="/TechTask/TaskCreatedByAdmin">جميع المهام المنشأة</a>
+                                </li>
+                                <li>
+                                    <a href="/CustomerComplaint/Index">جميع  شكاوى العملاء</a>
+                                </li>
+                                <li>
+                                    <a href="/TechTask/GetTechTasksForAdmin">المهام الخاصه بكل فنى</a>
+                                </li>
+                                <li>
+                                    <a href="/TechTask/CreateNewTask">إنشاء مهمة</a>
+                                </li>
+                                <li>
+                                    <a href="/TechTask/AssignUserInRegionToTask">إنشاء مهام للمناطق</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseReport"
+                               data-parent="#collapseReport">
+                                <i class="fa fa-fw fa-file ml-3 mr-2"></i>
+                                <span class="nav-link-text">التقارير</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseReport">
+                                <li>
+                                    <a href="/Report/TechnicalEndedTasksReport">تقرير تفصيلى لفنى</a>
+                                </li>
+                                <li>
+                                    <a href="/Report/TechnicalsTasksReport">تقرير تفصيلى للفنيين</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseUser"
+                               data-parent="#collapseUser">
+                                <i class="fa fa-fw fa-users ml-3 mr-2"></i>
+                                <span class="nav-link-text">المستخدمين</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseUser">
+                                <li>
+                                    <a href="/User/GetAllUsesWithRoleUser">جميع العملاء</a>
+                                </li>
+                                <li>
+                                    <a href="/User/GetAllUsesWithRoleAdmin">جميع المسؤلين</a>
+                                </li>
+                                <li>
+                                    <a href="/User/GetAllUsesWithRoleTechnical">جميع الفنيين</a>
+                                </li>
+                                <li>
+                                    <a href="/User/GetAllUsesWithRoleSales">جميع البائعين</a>
+                                </li>
+                                <li>
+                                    <a href="/User/CreateUser">إنشاء مستخدم جديد</a>
+                                </li>
+                                <li>
+                                    <a href="/User/ChangePassword">تغير الرقم السرى لمستخدم</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseCompanyInfo"
+                               data-parent="#collapseUser">
+                                <i class="fa fa-fw fa-users ml-3 mr-2"></i>
+                                <span class="nav-link-text">بيانات الشركة</span>
+                            </a>
+                            <ul class="sidenav-second-level collapse" id="collapseCompanyInfo">
+                                <li>
+                                    <a href="/CompanyInfo/Index">ماذا عنا والشروط</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav sidenav-toggler">
+                        <li class="nav-item">
+                            <a class="nav-link text-center" id="sidenavToggler">
+                                <i class="fa fa-fw fa-angle-left"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            using (Html.BeginForm("LogOff", "User", FormMethod.Post, new { id = "logoutForm" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <li class="nav-item">
+                                    <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                                        <i class="fa fa-fw fa-sign-out"></i>تسجيل الخروج
+                                    </button>
+                                </li>
+                            }
+                        }
+                        <li class="nav-item dropdown" style="width:350px">
+                            <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-fw fa-bell" style="margin-right:25px;margin-left:5px"></i>
+                                <span id="numOfNotifications" style="padding: 5px; background-color: red; border-radius: 10px; color: #fff; font-weight: bold;"></span>
+
+                            </a>
+                            <div id="notificaionMessages" class="dropdown-menu" aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">إشعارات جديدة:</h6>
+                                <div class="dropdown-divider"></div>
+                                
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </nav>
+
+            <ul class="navbar-nav sidenav-toggler">
+                <li class="nav-item">
+                    <a class="nav-link text-center" id="sidenavToggler">
+                        <i class="fa fa-fw fa-angle-left"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-bell" style="margin-right:25px"></i>
+                        <span class="d-lg-none">
+                            Alerts
+                            <span class="badge badge-pill badge-warning">6 New</span>
+                        </span>
+                        <span class="indicator text-warning d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="alertsDropdown">
+                        <h6 class="dropdown-header">New Alerts:</h6>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status Update
+                                </strong>
+                            </span>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">
+                                This is an automated server response message. All
+                                systems are online.
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <span class="text-danger">
+                                <strong>
+                                    <i class="fa fa-long-arrow-down fa-fw"></i>Status Update
+                                </strong>
+                            </span>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">
+                                This is an automated server response message. All
+                                systems are online.
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status Update
+                                </strong>
+                            </span>
+                            <span class="small float-right text-muted">11:21 AM</span>
+                            <div class="dropdown-message small">
+                                This is an automated server response message. All
+                                systems are online.
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item small" href="#">View all alerts</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0 mr-lg-2">
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fa fa-fw fa-sign-out"></i>Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid-->
+        <!-- /.content-wrapper-->
+        <footer class="sticky-footer">
+            <div class="container">
+                <div class="text-center">
+                    <small>Copyright © Your Website 2020</small>
+                </div>
+            </div>
+        </footer>
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+        <!-- Logout Modal-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="login.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript-->
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.bundle.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="/js/jquery.easing.min.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="/js/sb-admin.min.js"></script>
+        <script src="/js/bootbox.min.js"></script>
+
+        @*<script src="/js/DataTables/jquery.datatables.js"></script>
+        <script src="/js/DataTables/datatables.bootstrap.js"></script>*@
+        <script src="/js/datatable-v4/jquery-3.5.1.js"></script>
+        <script src="/js/datatable-v4/jquery.dataTables.min.js"></script>
+        <script src="/js/datatable-v4/dataTables.bootstrap4.min.js"></script>
+        @*<script src="/js/jquery-3.2.1.min.js"></script>*@
+        <script src="/js/moment.js"></script>
+        <script src="/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="~/js/select2.min.js"></script>
+        <script type="text/javascript" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="//cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js"></script>
+        <script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>
+        <script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.bootstrap4.min.js"></script>
+
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+        <script type="text/javascript" src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/pdfmake.min.js"></script>
+        <script type="text/javascript" src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.27/build/vfs_fonts.js"></script>
+        <script type="text/javascript" src="//cdn.datatables.net/buttons/1.3.1/js/buttons.html5.min.js"></script>
+
+        @RenderSection("Scripts", required: false)
+
+        <script type="text/javascript">
+
+            $(function () {
+                $.ajax({
+                    url: "/taskNotificationApi",
+                    method: "GET",
+                    success: function (obj) {
+                        if (obj == null) {
+                            $("#numOfNotifications").html(0);
+                        }
+                        else {
+                            $("#numOfNotifications").html(obj.count);
+                            for (var i = 0; i < obj.content.length; i++) {
+                                $("#notificaionMessages").append('<a class="dropdown-item" href="/CustomerComplaint/Index">' +
+                                    '<span class= "small float-right text-muted" >' + obj.content[i].time + '</span >' +
+                                    '<div class="dropdown-message small pr-2">' + obj.content[i].body + '</div>' +
+                                    '</a>' +
+                                    '<div class="dropdown-divider"></div>');
+                            }
+                        }
+
+                    },
+                    error: function () {
+                    }
+                });
+            });
+        </script>
+    </div>
+</body>
+
+</html>
