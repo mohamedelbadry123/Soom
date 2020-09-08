@@ -38,6 +38,7 @@ namespace Soom
         // This method gets called by the runtime. Use this method to add services to the container.
         // elbadry
         // elbadry2
+        // elbadry3
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSession();
