@@ -63,9 +63,12 @@ StyleCopReport.xml
 *_i.c
 *_p.c
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 *.dll
 >>>>>>> Elbadry
+=======
+>>>>>>> Yousef
 *_h.h
 *.ilk
 *.meta
@@ -342,6 +345,7 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 <<<<<<< HEAD
+<<<<<<< HEAD
 healthchecksdb
 =======
 healthchecksdb
@@ -359,3 +363,8 @@ Soom/obj/Debug/netcoreapp3.1/Soom.Views.dll
 Soom/obj/Debug/netcoreapp3.1/Soom.Views.pdb
 Soom/obj/Debug/netcoreapp3.1/Soom.dll
 >>>>>>> Elbadry
+=======
+healthchecksdb
+
+.vs/
+>>>>>>> Yousef
