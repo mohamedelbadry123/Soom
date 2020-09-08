@@ -41,6 +41,7 @@ namespace Soom
         // elbadry3
         // elbadry4
         // elbadry5
+        // elbadry6
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSession();
