@@ -10,3 +10,14 @@ D:\Works\35- Echo\Soom\Interfaces\bin\Debug\netcoreapp3.1\Entities.pdb
 D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.csproj.CopyComplete
 D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.dll
 D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.pdb
+E:\Work\Soom\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.deps.json
+E:\Work\Soom\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.dll
+E:\Work\Soom\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.pdb
+E:\Work\Soom\Interfaces\bin\Debug\netcoreapp3.1\Entities.dll
+E:\Work\Soom\Interfaces\bin\Debug\netcoreapp3.1\Entities.pdb
+E:\Work\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.csprojAssemblyReference.cache
+E:\Work\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.AssemblyInfoInputs.cache
+E:\Work\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.AssemblyInfo.cs
+E:\Work\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.csproj.CopyComplete
+E:\Work\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.dll
+E:\Work\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.pdb
