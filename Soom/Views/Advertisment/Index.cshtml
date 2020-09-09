@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<div class="row">
+    <div class="col-12">
+        <h3 class="alert-success p-3 text-center">All Advertisments</h3>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="container">
+        <div class="row">
+
+            <table id="ads" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <td>الكود</td>
+                        <td>الأسم </td>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var table = $("#ads").DataTable({
+                "processing": true,
+                "serverSide": true,
+                "filter": true,
+                "ajax": {
+                    "url": "/categoryApi",
+                    "type": "POST",
+                    "datatype": "json"
+                },
+                "columnDefs":
+                [{
+                "targets": [0],
+                "visible": false,
+                "searchable": false
+                }],
+                  "columns": [
+                    { "data": "id", "name": "Id", "autoWidth": true },
+                    { "data": "name", "name": "Name", "autoWidth": true }
+             ]
+            });
+
+
+        })
+
+
+
+    </script>
+}

@@ -23,6 +23,7 @@ using Interfaces.Interfaces;
 using DbServices.Services;
 using Entities.Models;
 using DbServices.Model;
+using DbService.Services;
 
 namespace Soom
 {
@@ -45,6 +46,7 @@ namespace Soom
         {
             services.AddSession();
             services.AddScoped<ICoreBase, CoreBaseService>();
+            services.AddScoped<ICategory, CategoryService>();
 
             services.AddControllersWithViews();
             services.AddRazorPages();

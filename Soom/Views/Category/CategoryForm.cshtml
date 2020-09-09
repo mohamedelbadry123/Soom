@@ -1,0 +1,53 @@
+﻿@model Interfaces.ViewModel.CategoryViewModel
+<div class="row">
+    <div class="col-12">
+        @if (Model.Category.Id == 0)
+        {
+            <h3 class="alert-success p-3 text-center">Add Category </h3>
+        }
+        else
+        {
+            <h3 class="alert-success p-3 text-center">Edit Category </h3>
+        }
+    </div>
+</div>
+@using (Html.BeginForm("Save", "Category", FormMethod.Post, new
+{
+    enctype = "multipart/form-data"
+}))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(c => c.Category.Id)
+<div class="row">
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label>Category Name</label>
+            @Html.TextBoxFor(c => c.Category.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Category.Name, "", new { @class = "alert-danger" })
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group">
+            <label>Category Description</label>
+            @Html.TextAreaFor(c => c.Category.Desc, new { @class = "form-control" })
+            @Html.ValidationMessageFor(c => c.Category.Desc, "", new { @class = "alert-danger" })
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label>Image</label>
+            <input type="file" name="Image" multiple
+                   onchange="document.getElementById('ChoosenImg').src = window.URL.createObjectURL(this.files[0])">
+        </div>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-sm-3">
+            <label class="alert-danger">@Html.DisplayFor(c => c.Error)</label>
+        </div>
+    </div>
+    <div class="row">
+        <button type="submit" class="btn btn-success mr-3">حفظ</button>
+    </div>
+}
