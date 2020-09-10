@@ -85,6 +85,7 @@ namespace Soom.Controllers
                 {
                     collection.Error = "There was an error in raising the pictures !";
                 }
+
                 collection.Category.Image = fileName;
                 _coreRepo.Add(collection.Category);
                 await _coreRepo.SaveAll();

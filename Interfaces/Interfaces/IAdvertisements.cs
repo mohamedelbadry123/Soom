@@ -9,7 +9,7 @@ namespace Interfaces.Interfaces
 {
    public interface IAdvertisements
     {
-        Task<List<Advertisment>> GetAllAdvertismentWithPagination(DataTablePram dataTablePram);
+        Task<PagedList<Advertisment>> GetAllAdvertismentWithPagination(DataTablePram dataTablePram);
 
         Task<Advertisment> GetAdvertismentById(int id);
 

@@ -36,20 +36,24 @@ namespace Soom.API
                 var searchValue = Request.Form["search[value]"].FirstOrDefault();
                 int pageSize = length != null ? Convert.ToInt32(length) : 0;
                 int skip = start != null ? Convert.ToInt32(start) : 0;
-           
+                int recordsTotal = 0;
                 // Datatable Properties End 
 
-                var All = await _Category.GetAllCategory(new UserParams { Key = searchValue ,
-                    PageNumber = int.Parse(draw) ,
-                    PageSize = pageSize  });
+                int Page = (int.Parse(start) / pageSize);
                 //Get All By Server Pagination 
-
+                var AllCategory = await _Category.GetAllCategoryWithPagination(new DataTablePram
+                {
+                    Key = searchValue,
+                    PageSize = pageSize,
+                    Skip = Page
+                });
                 //Get All By Server Pagination  End
 
 
                 // Send to View 
 
-                var jsonData = new { draw = All.CurrentPage, recordsFiltered = All.TotalCount, recordsTotal = All.TotalCount, data = All };
+                var data = AllCategory;
+                var jsonData = new { recordsFiltered = AllCategory.TotalCount, recordsTotal = AllCategory.TotalCount, data = AllCategory };
                 // Send to View End
                 return Ok(jsonData);
             }

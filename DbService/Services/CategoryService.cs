@@ -43,21 +43,17 @@ namespace DbService.Services
 
         }
 
-        public async Task<List<Category>> GetAllCategoryWithPagination(DataTablePram dataTablePram)
+        public async Task<PagedList<Category>> GetAllCategoryWithPagination(DataTablePram dataTablePram)
         {
-            var CategoryInDb = await _context.Categories
-               .Skip(dataTablePram.Skip).Take(dataTablePram.PageSize)
-               .ToListAsync();
-
+            var CategoryInDb = _context.Categories
+               .AsQueryable();
 
             if (!string.IsNullOrEmpty(dataTablePram.Key))
             {
                 CategoryInDb = CategoryInDb.Where(c =>
-                 c.Name.Contains(dataTablePram.Key) || c.Desc.Contains(dataTablePram.Key)).ToList();
+                    c.Name.Contains(dataTablePram.Key) || c.Desc.Contains(dataTablePram.Key));
             }
-
-
-            return  CategoryInDb;
+            return await PagedList<Category>.CreateAsync(CategoryInDb, dataTablePram.Skip, dataTablePram.PageSize);
 
         }
 

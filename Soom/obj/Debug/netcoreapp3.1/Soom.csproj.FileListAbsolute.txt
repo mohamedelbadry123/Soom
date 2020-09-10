@@ -249,6 +249,9 @@ E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Soom.AssemblyInfo.cs
 E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Soom.TagHelpers.input.cache
 E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Soom.TagHelpers.output.cache
 E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Soom.RazorCoreGenerate.cache
+E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Razor\Views\Advertisment\AdvertismentForm.cshtml.g.cs
+E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Razor\Views\Advertisment\Index.cshtml.g.cs
+E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryForm.cshtml.g.cs
 E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs
 E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
@@ -269,6 +272,3 @@ E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Soom.Views.pdb
 E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Soom.csproj.CopyComplete
 E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Soom.dll
 E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Soom.pdb
-E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryForm.cshtml.g.cs
-E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Razor\Views\Advertisment\Index.cshtml.g.cs
-E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Razor\Views\Advertisment\AdvertismentForm.cshtml.g.cs

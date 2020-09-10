@@ -29,24 +29,13 @@ namespace DbService.Services
             return Advertisment;
         }
 
-        public async Task<List<Advertisment>> GetAllAdvertismentWithPagination(DataTablePram dataTablePram)
+        public async Task<PagedList<Advertisment>> GetAllAdvertismentWithPagination(DataTablePram dataTablePram)
         {
-            var AdvertismentInDb = await _context.Advertisments
-            .Skip(dataTablePram.Skip).Take(dataTablePram.PageSize)
-            .ToListAsync();
+            var AdvertismentInDb = _context.Advertisments
+              .AsQueryable();
 
 
-            if (!string.IsNullOrEmpty(dataTablePram.Key))
-            {
-                AdvertismentInDb = AdvertismentInDb.Where(c =>
-                 c.Description.Contains(dataTablePram.Key) ||
-                 c.Title.Contains(dataTablePram.Key) ||
-                 c.UriLink.Contains(dataTablePram.Key) ||
-                 c.Subject.Contains(dataTablePram.Key)).ToList();
-            }
-
-
-            return AdvertismentInDb;
+            return await PagedList<Advertisment>.CreateAsync(AdvertismentInDb, dataTablePram.Skip, dataTablePram.PageSize);
         }
     }
 }
