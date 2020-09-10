@@ -52,7 +52,7 @@ namespace Soom.API
                 // Send to View 
 
                
-                var jsonData = new { recordsFiltered = AllSubCategory.TotalCount, recordsTotal = AllSubCategory.TotalCount, data = AllSubCategory };
+                var jsonData = new { draw = draw, recordsFiltered = AllSubCategory.TotalCount, recordsTotal = AllSubCategory.TotalCount, data = AllSubCategory };
                 // Send to View End
                 return Ok(jsonData);
             }

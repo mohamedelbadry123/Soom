@@ -30,9 +30,6 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "E:\\Work\\Soom\\Entity\\Entities.csproj": {
-                "projectPath": "E:\\Work\\Soom\\Entity\\Entities.csproj"
-              },
               "E:\\Work\\Soom\\Interfaces\\Interfaces.csproj": {
                 "projectPath": "E:\\Work\\Soom\\Interfaces\\Interfaces.csproj"
               }
