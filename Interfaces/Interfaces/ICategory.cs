@@ -11,7 +11,7 @@ namespace Interfaces.Interfaces
 {
    public interface ICategory : IService
     {
-        Task<PagedList<Category>> GetAllCategory(UserParams userParam);
+        Task<List<Category>> GetAllCategory();
         Task<PagedList<Category>> GetAllCategoryWithPagination(DataTablePram dataTablePram);
 
         Task<Category> GetCategoryById(int id);

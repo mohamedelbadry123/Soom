@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Entities.Models;
 using Interfaces.Interfaces;
+using Interfaces.ViewModel;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,13 +14,15 @@ namespace Soom.Controllers
     {
         private readonly ICoreBase _coreRepo;
         private readonly ISubCategory _SubCategoryrepo;
+        private readonly ICategory _Categoryrepo;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public SubCategoryController(ICoreBase coreRepo, ISubCategory SubCategoryrepo, IWebHostEnvironment webHostEnvironment)
+        public SubCategoryController(ICategory Categoryrepo,ICoreBase coreRepo, ISubCategory SubCategoryrepo, IWebHostEnvironment webHostEnvironment)
         {
             _coreRepo = coreRepo;
             _SubCategoryrepo = SubCategoryrepo;
             _webHostEnvironment = webHostEnvironment;
+            _Categoryrepo = Categoryrepo;
         }
 
         public IActionResult Index()
@@ -27,10 +30,14 @@ namespace Soom.Controllers
             return View();
         }
 
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
 
-            var model = new SubCategory();
+            var model = new SubCategoryViewModel()
+            {
+                Categories = await _Categoryrepo.GetAllCategory(),
+                 SubCategory = new SubCategory()
+            };
 
             return View("SubCategoryForm", model);
         }
@@ -39,30 +46,36 @@ namespace Soom.Controllers
         {
             var SubCategory = await _SubCategoryrepo.GetSubCategoryById(id);
 
-            return View("SubCategoryForm", SubCategory);
+
+            var model = new SubCategoryViewModel()
+            {
+                Categories = await _Categoryrepo.GetAllCategory(),
+                SubCategory = SubCategory
+            };
+            return View("SubCategoryForm", model);
         }
 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Save(SubCategory model)
+        public async Task<ActionResult> Save(SubCategoryViewModel model)
         {
             if (!ModelState.IsValid)
             {
                 return View("SubCategoryForm", model);
             }
 
-            if (model.Id == 0)
+            if (model.SubCategory.Id == 0)
             {
-                _coreRepo.Add(model);
+                _coreRepo.Add(model.SubCategory);
             }
             else
             {
-                var SubCategory = await _SubCategoryrepo.GetSubCategoryById(model.Id);
+                var SubCategory = await _SubCategoryrepo.GetSubCategoryById(model.SubCategory.Id);
 
-                SubCategory.CategoryId = model.CategoryId;
-                SubCategory.Desc = model.Desc;
-                SubCategory.Name = model.Name;
+                SubCategory.CategoryId = model.SubCategory.CategoryId;
+                SubCategory.Desc = model.SubCategory.Desc;
+                SubCategory.Name = model.SubCategory.Name;
                
             }
 

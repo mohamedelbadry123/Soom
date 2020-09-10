@@ -25,21 +25,15 @@ namespace DbService.Services
             _context = context;
         }
 
-        public async Task<PagedList<Category>> GetAllCategory(UserParams userParam)
+        public async Task<List<Category>> GetAllCategory()
         {
 
-            var CategoryInDb = _context.Categories
-               .AsQueryable();
+            var CategoryInDb = await _context.Categories.ToListAsync();
 
 
-            if (!string.IsNullOrEmpty(userParam.Key))
-            {
-                CategoryInDb = CategoryInDb.Where(c =>
-                    c.Name.Contains(userParam.Key) || c.Desc.Contains(userParam.Key));
-            }
+           
 
-
-            return await PagedList<Category>.CreateAsync(CategoryInDb, userParam.PageNumber, userParam.PageSize);
+            return CategoryInDb;
 
         }
 

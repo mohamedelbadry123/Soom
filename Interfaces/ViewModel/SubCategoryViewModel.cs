@@ -9,5 +9,6 @@ namespace Interfaces.ViewModel
     {
         public List<Category> Categories { get; set; }
 
+        public SubCategory SubCategory { get; set; }
     }
 }
