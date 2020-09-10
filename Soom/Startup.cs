@@ -47,6 +47,7 @@ namespace Soom
             services.AddSession();
             services.AddScoped<ICoreBase, CoreBaseService>();
             services.AddScoped<ICategory, CategoryService>();
+            services.AddScoped<IAdvertisements, AdvertisementsService>();
 
             services.AddControllersWithViews();
             services.AddRazorPages();

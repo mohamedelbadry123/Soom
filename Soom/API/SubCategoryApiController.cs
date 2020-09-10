@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Entities.Models;
 using Interfaces.Helpers;
 using Interfaces.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -12,20 +11,20 @@ namespace Soom.API
 {
     [Route("[controller]")]
     [ApiController]
-    public class AdvertismentApiController : ControllerBase
+    public class SubCategoryApiController : ControllerBase
     {
         private readonly ICoreBase _repoCore;
-        private readonly IAdvertisements _Advertisment;
+        private readonly ISubCategory _SubCategory;
 
-        public AdvertismentApiController(ICoreBase repoCore, IAdvertisements Advertisment)
+        public SubCategoryApiController(ICoreBase repoCore, ISubCategory SubCategory)
         {
             _repoCore = repoCore;
-            _Advertisment = Advertisment;
+            _SubCategory = SubCategory;
         }
 
 
         [HttpPost]
-        public async Task<IActionResult> AllAdvertisment()
+        public async Task<IActionResult> GetSubCategories()
         {
             try
             {
@@ -37,10 +36,11 @@ namespace Soom.API
                 int pageSize = length != null ? Convert.ToInt32(length) : 0;
                 int skip = start != null ? Convert.ToInt32(start) : 0;
                
-                // Datatable Properties End
+                // Datatable Properties End 
+
                 int Page = (int.Parse(start) / pageSize);
                 //Get All By Server Pagination 
-                var AllCategory = await _Advertisment.GetAllAdvertismentWithPagination(new DataTablePram
+                var AllSubCategory = await _SubCategory.GetAllSubCategoryWithPagination(new DataTablePram
                 {
                     Key = searchValue,
                     PageSize = pageSize,
@@ -51,8 +51,8 @@ namespace Soom.API
 
                 // Send to View 
 
-                var data = AllCategory;
-                var jsonData = new { recordsFiltered = AllCategory.TotalCount, recordsTotal = AllCategory.TotalCount, data = AllCategory };
+               
+                var jsonData = new { recordsFiltered = AllSubCategory.TotalCount, recordsTotal = AllSubCategory.TotalCount, data = AllSubCategory };
                 // Send to View End
                 return Ok(jsonData);
             }
@@ -60,25 +60,6 @@ namespace Soom.API
             {
                 throw;
             }
-        }
-
-
-       
-        [HttpGet("Delete")]
-        public async Task<IActionResult> DeleteAdvertisment(int id)
-        {
-            var Advertisment = await _Advertisment.GetAdvertismentById(id);
-
-            Advertisment.IsActive = false;
-
-            await _repoCore.SaveAll();
-         
-
-           
-
-            
-
-            return Ok();
         }
 
 

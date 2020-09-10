@@ -32,7 +32,11 @@ namespace Soom.Controllers
         public ActionResult Create()
         {
 
-            var model = new Advertisment();
+            var model = new AdvertismentViewModel()
+            {
+                Advertisment = new Advertisment(),
+                File = null
+            };
 
             return View("AdvertismentForm", model);
         }
@@ -45,7 +49,7 @@ namespace Soom.Controllers
             var model = new AdvertismentViewModel
             {
                 Advertisment = Advertisment,
-                Image = null
+                File = null
 
             };
             
@@ -69,7 +73,7 @@ namespace Soom.Controllers
 
             if (collection.Advertisment.Id == 0)
             {
-                if (collection.Image == null)
+                if (collection.File == null)
                 {
                     collection.Error = "Please Add Image !";
 
@@ -77,12 +81,13 @@ namespace Soom.Controllers
                 }
 
                 string fileName;
-                var isImageSaved = _coreRepo.SaveSingleImageFormFile(root, collection.Image, out fileName);
+                var isImageSaved = _coreRepo.SaveSingleImageFormFile(root, collection.File, out fileName);
                 if (!isImageSaved)
                 {
                     collection.Error = "There was an error in raising the pictures !";
                 }
                 collection.Advertisment.File = fileName;
+                collection.Advertisment.IsActive = true;
                 _coreRepo.Add(collection.Advertisment);
                 await _coreRepo.SaveAll();
 
@@ -102,10 +107,9 @@ namespace Soom.Controllers
 
 
 
-                if (collection.Image != null)
+                if (collection.File != null)
                 {
                    
-
                     string fullPath = root + "/" + Advertisment.File;
                     if (System.IO.File.Exists(fullPath))
                     {
@@ -115,7 +119,7 @@ namespace Soom.Controllers
 
 
                     string fileName;
-                    var isImageSaved = _coreRepo.SaveSingleImageFormFile(root, collection.Image, out fileName);
+                    var isImageSaved = _coreRepo.SaveSingleImageFormFile(root, collection.File, out fileName);
                     if (!isImageSaved)
                     {
                         collection.Error = "There was an error in raising the pictures !";

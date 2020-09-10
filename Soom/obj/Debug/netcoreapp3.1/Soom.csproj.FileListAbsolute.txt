@@ -272,3 +272,5 @@ E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Soom.Views.pdb
 E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Soom.csproj.CopyComplete
 E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Soom.dll
 E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Soom.pdb
+E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Razor\Views\SubCategory\Index.cshtml.g.cs
+E:\Work\Soom\Soom\obj\Debug\netcoreapp3.1\Razor\Views\SubCategory\SubCategoryForm.cshtml.g.cs

@@ -10,7 +10,7 @@ namespace Interfaces.ViewModel
     {
         public Advertisment Advertisment { get; set; }
 
-        public IFormFile Image { get; set; }
+        public IFormFile File { get; set; }
 
         public string Error { get; set; }
     }

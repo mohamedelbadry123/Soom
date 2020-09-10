@@ -31,9 +31,17 @@ namespace DbService.Services
 
         public async Task<PagedList<Advertisment>> GetAllAdvertismentWithPagination(DataTablePram dataTablePram)
         {
-            var AdvertismentInDb = _context.Advertisments
+            var AdvertismentInDb = _context.Advertisments.Where(c=>c.IsActive == true)
               .AsQueryable();
 
+            if (!string.IsNullOrEmpty(dataTablePram.Key))
+            {
+                AdvertismentInDb = AdvertismentInDb.Where(c =>
+                    c.Description.Contains(dataTablePram.Key) 
+                    || c.CountDays.ToString().Contains(dataTablePram.Key)
+                    || c.StartDate.ToString().Contains(dataTablePram.Key)
+                    || c.UriLink.Contains(dataTablePram.Key));
+            }
 
             return await PagedList<Advertisment>.CreateAsync(AdvertismentInDb, dataTablePram.Skip, dataTablePram.PageSize);
         }

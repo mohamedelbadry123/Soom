@@ -9,7 +9,7 @@ namespace Interfaces.Interfaces
 {
    public interface ISubCategory
     {
-        Task<List<SubCategory>> GetAllSubCategoryWithPagination(DataTablePram dataTablePram);
+        Task<PagedList<SubCategory>> GetAllSubCategoryWithPagination(DataTablePram dataTablePram);
         Task<SubCategory> GetSubCategoryById(int id);
 
     }

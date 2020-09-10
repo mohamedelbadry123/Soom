@@ -15,13 +15,15 @@ namespace Entities.Models
         [Required]
         public string Description { get; set; }
         [Required]
-        public DateTime StartDate { get; set; }
+        public DateTime? StartDate { get; set; }
         [Required]
         public int CountDays { get; set; }
         [Required]
         public string UriLink { get; set; }
      
         public string File { get; set; }
+
+        public bool IsActive { get; set; }
 
     }
 }
