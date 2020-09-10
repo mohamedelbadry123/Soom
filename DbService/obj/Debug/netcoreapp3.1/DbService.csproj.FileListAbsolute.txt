@@ -5,8 +5,8 @@ E:\Work\Soom\DbService\bin\Debug\netcoreapp3.1\DbService.dll
 E:\Work\Soom\DbService\bin\Debug\netcoreapp3.1\DbService.pdb
 E:\Work\Soom\DbService\bin\Debug\netcoreapp3.1\Entities.dll
 E:\Work\Soom\DbService\bin\Debug\netcoreapp3.1\Interfaces.dll
-E:\Work\Soom\DbService\bin\Debug\netcoreapp3.1\Entities.pdb
 E:\Work\Soom\DbService\bin\Debug\netcoreapp3.1\Interfaces.pdb
+E:\Work\Soom\DbService\bin\Debug\netcoreapp3.1\Entities.pdb
 E:\Work\Soom\DbService\obj\Debug\netcoreapp3.1\DbService.csprojAssemblyReference.cache
 E:\Work\Soom\DbService\obj\Debug\netcoreapp3.1\DbService.AssemblyInfoInputs.cache
 E:\Work\Soom\DbService\obj\Debug\netcoreapp3.1\DbService.AssemblyInfo.cs

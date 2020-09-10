@@ -15,7 +15,9 @@
                 <thead>
                     <tr>
                         <td>Name</td>
-
+                        <td>Category</td>
+                        <td>Description</td>
+                        <td>Actions</td>
                     </tr>
                 </thead>
                 <tbody></tbody>
@@ -41,8 +43,15 @@
                 },
                 "columns": [
 
-                    { "data": "name" }
-                 
+                    { "data": "name" },
+                    { "data": "categoryName" },
+                    { "data": "desc"  },
+                     {
+                        data: "id",
+                        render: function (data) {
+                            return "<a class='btn btn-primary' href='/SubCategory/Update/" + data + "'>Edit</a>";
+                        }
+                    }
                 ]
             });
 

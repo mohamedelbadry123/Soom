@@ -1,6 +1,7 @@
 E:\Work\Soom\Entity\bin\Debug\netcoreapp3.1\Entities.deps.json
 E:\Work\Soom\Entity\bin\Debug\netcoreapp3.1\Entities.dll
 E:\Work\Soom\Entity\bin\Debug\netcoreapp3.1\Entities.pdb
+E:\Work\Soom\Entity\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache
 E:\Work\Soom\Entity\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
 E:\Work\Soom\Entity\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
 E:\Work\Soom\Entity\obj\Debug\netcoreapp3.1\Entities.dll

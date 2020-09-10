@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace DbService.Services
 {
     public class SubCategoryService : BaseService, ISubCategory
@@ -21,21 +22,21 @@ namespace DbService.Services
             _context = context;
         }
 
-        public async Task<PagedList<SubCategory>> GetAllSubCategoryWithPagination(DataTablePram dataTablePram)
+        public async Task<PagedList<SubCategoryDatatableViewModel>> GetAllSubCategoryWithPagination(DataTablePram dataTablePram)
         {
-            var SubCategoryInDb = _context.SubCategorys.Include(c=> c.Category)
+            var SubCategoryInDb = _context.SubCategorys.Include(c => c.Category).AsNoTracking().Select(c=> new SubCategoryDatatableViewModel { CategoryId = c.CategoryId, CategoryName = c.Category.Name, Id = c.Id, Name=c.Name, Desc=c.Desc })
                          .AsQueryable();
 
             if (!string.IsNullOrEmpty(dataTablePram.Key))
             {
                 SubCategoryInDb = SubCategoryInDb.Where(c =>
                     c.Desc.Contains(dataTablePram.Key)
-                    || c.Category.Name.ToString().Contains(dataTablePram.Key)
+                    || c.CategoryName.ToString().Contains(dataTablePram.Key)
                     || c.Name.ToString().Contains(dataTablePram.Key)
                     );
             }
 
-            return await PagedList<SubCategory>.CreateAsync(SubCategoryInDb, dataTablePram.Skip, dataTablePram.PageSize);
+            return await PagedList<SubCategoryDatatableViewModel>.CreateAsync(SubCategoryInDb, dataTablePram.Skip, dataTablePram.PageSize);
         }
 
         public async Task<SubCategory> GetSubCategoryById(int id)
