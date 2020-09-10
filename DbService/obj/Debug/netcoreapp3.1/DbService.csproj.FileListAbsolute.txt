@@ -13,6 +13,8 @@ D:\Works\35- Echo\Soom\DbService\obj\Debug\netcoreapp3.1\DbService.pdb
 D:\Works\35- Echo\Soom\DbService\bin\Debug\netcoreapp3.1\Interfaces.dll
 D:\Works\35- Echo\Soom\DbService\bin\Debug\netcoreapp3.1\Interfaces.pdb
 E:\Work\Soom\DbService\bin\Debug\netcoreapp3.1\DbService.deps.json
+E:\Work\Soom\DbService\bin\Debug\netcoreapp3.1\DbService.runtimeconfig.json
+E:\Work\Soom\DbService\bin\Debug\netcoreapp3.1\DbService.runtimeconfig.dev.json
 E:\Work\Soom\DbService\bin\Debug\netcoreapp3.1\DbService.dll
 E:\Work\Soom\DbService\bin\Debug\netcoreapp3.1\DbService.pdb
 E:\Work\Soom\DbService\bin\Debug\netcoreapp3.1\Entities.dll

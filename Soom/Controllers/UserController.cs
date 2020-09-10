@@ -18,7 +18,7 @@ using Interfaces.Interfaces;
 
 namespace Aknan.Controllers
 {
-    [Authorize(Roles = "Admin")]
+  //  [Authorize(Roles = "Admin")]
     public class UserController : Controller
     {
         private readonly UserManager<Users> _userManager;

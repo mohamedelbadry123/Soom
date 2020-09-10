@@ -13,10 +13,15 @@ namespace DbServices.Model
         {
 
         }
-        
+
+
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Advertisment> Advertisments { get; set; }
+        public DbSet<SubCategory> SubCategorys { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
         }
+
     }
 }

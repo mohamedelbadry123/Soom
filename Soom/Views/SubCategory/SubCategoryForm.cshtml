@@ -1,0 +1,48 @@
+﻿@model Interfaces.ViewModel.SubCategoryViewModel
+<div class="row">
+    <div class="col-12">
+        @if (Model.SubCategory.Id == 0)
+        {
+            <h3 class="alert-success p-3 text-center">Add Sub Category </h3>
+        }
+        else
+        {
+            <h3 class="alert-success p-3 text-center">Edit Sub Category </h3>
+        }
+    </div>
+</div>
+@using (Html.BeginForm("Save", "SubCategory", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(c => c.SubCategory.Id)
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label>Sub Category Name</label>
+                @Html.TextBoxFor(c => c.SubCategory.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(c => c.SubCategory.Name, "", new { @class = "alert-danger" })
+            </div>
+        </div>
+
+
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label class="custom-font">Category</label>
+                @Html.DropDownListFor(c => c.SubCategory.CategoryId, new SelectList(Model.Categories, "Id", "Name"), "Please choose Category ...", new { @class = "form-control js-dropdown" })
+                @Html.ValidationMessageFor(c => c.SubCategory.CategoryId, "", new { @class = "alert-danger" })
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Description</label>
+                @Html.TextAreaFor(c => c.SubCategory.Desc, new { @class = "form-control" })
+                @Html.ValidationMessageFor(c => c.SubCategory.Desc, "", new { @class = "alert-danger" })
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <button type="submit" class="btn btn-success mr-3">Save</button>
+    </div>
+}
