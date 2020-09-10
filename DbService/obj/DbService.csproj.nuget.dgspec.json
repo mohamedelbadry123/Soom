@@ -1,40 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Work\\Soom\\DbService\\DbService.csproj": {}
+    "D:\\Works\\35- Echo\\Soom\\DbService\\DbService.csproj": {}
   },
   "projects": {
-    "E:\\Work\\Soom\\DbService\\DbService.csproj": {
+    "D:\\Works\\35- Echo\\Soom\\DbService\\DbService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Work\\Soom\\DbService\\DbService.csproj",
+        "projectUniqueName": "D:\\Works\\35- Echo\\Soom\\DbService\\DbService.csproj",
         "projectName": "DbService",
-        "projectPath": "E:\\Work\\Soom\\DbService\\DbService.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "E:\\Work\\Soom\\DbService\\obj\\",
+        "projectPath": "D:\\Works\\35- Echo\\Soom\\DbService\\DbService.csproj",
+        "packagesPath": "C:\\Users\\Mouhamed\\.nuget\\packages\\",
+        "outputPath": "D:\\Works\\35- Echo\\Soom\\DbService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mouhamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "E:\\Work\\Soom\\Entity\\Entities.csproj": {
-                "projectPath": "E:\\Work\\Soom\\Entity\\Entities.csproj"
+              "D:\\Works\\35- Echo\\Soom\\Entity\\Entities.csproj": {
+                "projectPath": "D:\\Works\\35- Echo\\Soom\\Entity\\Entities.csproj"
               },
-              "E:\\Work\\Soom\\Interfaces\\Interfaces.csproj": {
-                "projectPath": "E:\\Work\\Soom\\Interfaces\\Interfaces.csproj"
+              "D:\\Works\\35- Echo\\Soom\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "D:\\Works\\35- Echo\\Soom\\Interfaces\\Interfaces.csproj"
               }
             }
           }
@@ -90,31 +89,30 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Work\\Soom\\Entity\\Entities.csproj": {
+    "D:\\Works\\35- Echo\\Soom\\Entity\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Work\\Soom\\Entity\\Entities.csproj",
+        "projectUniqueName": "D:\\Works\\35- Echo\\Soom\\Entity\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "E:\\Work\\Soom\\Entity\\Entities.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "E:\\Work\\Soom\\Entity\\obj\\",
+        "projectPath": "D:\\Works\\35- Echo\\Soom\\Entity\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Mouhamed\\.nuget\\packages\\",
+        "outputPath": "D:\\Works\\35- Echo\\Soom\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mouhamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -155,38 +153,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Work\\Soom\\Interfaces\\Interfaces.csproj": {
+    "D:\\Works\\35- Echo\\Soom\\Interfaces\\Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Work\\Soom\\Interfaces\\Interfaces.csproj",
+        "projectUniqueName": "D:\\Works\\35- Echo\\Soom\\Interfaces\\Interfaces.csproj",
         "projectName": "Interfaces",
-        "projectPath": "E:\\Work\\Soom\\Interfaces\\Interfaces.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "E:\\Work\\Soom\\Interfaces\\obj\\",
+        "projectPath": "D:\\Works\\35- Echo\\Soom\\Interfaces\\Interfaces.csproj",
+        "packagesPath": "C:\\Users\\Mouhamed\\.nuget\\packages\\",
+        "outputPath": "D:\\Works\\35- Echo\\Soom\\Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mouhamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "E:\\Work\\Soom\\Entity\\Entities.csproj": {
-                "projectPath": "E:\\Work\\Soom\\Entity\\Entities.csproj"
+              "D:\\Works\\35- Echo\\Soom\\Entity\\Entities.csproj": {
+                "projectPath": "D:\\Works\\35- Echo\\Soom\\Entity\\Entities.csproj"
               }
             }
           }
@@ -214,7 +211,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

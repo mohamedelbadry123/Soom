@@ -58,7 +58,7 @@ namespace Soom.API
             }
             catch (Exception ex)
             {
-                throw;
+                return BadRequest(ex.Message);
             }
         }
 

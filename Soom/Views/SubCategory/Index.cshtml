@@ -29,6 +29,7 @@
 @section scripts{
     <script type="text/javascript">
         $(document).ready(function () {
+            $.aj
             var table = $("#SubCategoryData").DataTable({
                 "processing": true,
                 "serverSide": true,
@@ -38,7 +39,6 @@
                     "type": "POST",
                     "datatype": "json"
                 },
-
                 "columns": [
 
                     { "data": "name" }

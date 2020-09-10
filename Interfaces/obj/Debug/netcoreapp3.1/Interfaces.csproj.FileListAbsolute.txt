@@ -1,15 +1,3 @@
-D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.csprojAssemblyReference.cache
-D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.AssemblyInfoInputs.cache
-D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.AssemblyInfo.cs
-D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.csproj.CoreCompileInputs.cache
-D:\Works\35- Echo\Soom\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.deps.json
-D:\Works\35- Echo\Soom\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.dll
-D:\Works\35- Echo\Soom\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.pdb
-D:\Works\35- Echo\Soom\Interfaces\bin\Debug\netcoreapp3.1\Entities.dll
-D:\Works\35- Echo\Soom\Interfaces\bin\Debug\netcoreapp3.1\Entities.pdb
-D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.csproj.CopyComplete
-D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.dll
-D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.pdb
 E:\Work\Soom\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.deps.json
 E:\Work\Soom\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.dll
 E:\Work\Soom\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.pdb
@@ -21,3 +9,15 @@ E:\Work\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.AssemblyInfo.cs
 E:\Work\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.csproj.CopyComplete
 E:\Work\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.dll
 E:\Work\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.pdb
+D:\Works\35- Echo\Soom\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.deps.json
+D:\Works\35- Echo\Soom\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.dll
+D:\Works\35- Echo\Soom\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.pdb
+D:\Works\35- Echo\Soom\Interfaces\bin\Debug\netcoreapp3.1\Entities.dll
+D:\Works\35- Echo\Soom\Interfaces\bin\Debug\netcoreapp3.1\Entities.pdb
+D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.csprojAssemblyReference.cache
+D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.AssemblyInfoInputs.cache
+D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.AssemblyInfo.cs
+D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.csproj.CoreCompileInputs.cache
+D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.csproj.CopyComplete
+D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.dll
+D:\Works\35- Echo\Soom\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.pdb

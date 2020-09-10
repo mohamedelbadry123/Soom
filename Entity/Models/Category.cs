@@ -16,8 +16,6 @@ namespace Entities.Models
    
         public string Image { get; set; }
 
-
-
         public ICollection<SubCategory> SubCategorys { get; set; }
 
         public Category()
